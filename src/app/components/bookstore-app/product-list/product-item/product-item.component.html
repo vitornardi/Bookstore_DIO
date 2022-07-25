@@ -1,0 +1,20 @@
+<div class="card shadow-sm">
+    <img class="bd-placeholder-img card-img-top" width="100%" [src]="livro.image" alt="#">
+
+    <div class="card-body">
+        <h4 class="card-title">{{ livro.title}}</h4>
+        <h5 class="card-subtitle">{{ livro.subtitle}}</h5>
+        <h4 class="card-subtitle">{{ livro.year }}</h4>        
+    </div>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">ISBN: {{ livro.isbn13 }}</li>
+        <li class="list-group-item">Preço: {{ livro.priceReal | currency:'BRL' }}</li>
+    </ul>
+
+    <div class="card-body">
+        <div class="btn-group d-flex justify-content-evenly">
+            <button class="btn btn-success">Comprar</button>
+            <button class="btn btn-secondary">Detalhes</button>
+        </div>
+    </div>
